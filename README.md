@@ -92,7 +92,7 @@ Forecast future MRR and ARR and simulate financial loss from churn.
 
 ---
 
-## 📊 Dataset Description
+## Dataset Description
 
 The **RavenStack Dataset** simulates a realistic SaaS environment through **five relational tables**.
 
@@ -112,7 +112,7 @@ The **RavenStack Dataset** simulates a realistic SaaS environment through **five
 
 ---
 
-## ⚙️ Methodology
+## Methodology
 
 ### Step 1 – Data Engineering
 1. Load all CSVs into a SQL environment (SQLite / Snowflake).  
@@ -152,7 +152,7 @@ Create an interactive **Retention Command Center Dashboard** (Tableau / Plotly D
 
 ---
 
-## 📈 Results (Expected)
+## Results (Expected)
 
 | Metric | Value | Interpretation |
 |:--------|:-------|:---------------|
