@@ -1,175 +1,164 @@
 # Customer-Churn-Retention-Intelligence-System-for-SaaS-Platforms
 Our system integrates multi-table SaaS data across accounts, subscriptions, usage, support, and churn to build a 360° view of the customer lifecycle. By linking engagement, satisfaction, and financial outcomes, it forecasts churn risk, quantifies potential MRR/ARR loss, and simulates retention strategies.
 
-## Introduction
+---
 
-The **Software-as-a-Service (SaaS)** model has transformed how organizations deliver and consume software.  
-Unlike one-time licenses, SaaS businesses rely on **recurring subscriptions**, meaning their growth depends heavily on **customer retention** rather than acquisition.  
-In this context, **customer churn** — when a user cancels or fails to renew — poses a serious threat to **Monthly Recurring Revenue (MRR)** and **Annual Recurring Revenue (ARR)**.
+## Overview
 
-### Why Churn Prediction Matters
-Predicting churn allows SaaS companies to:
-- Identify at-risk customers early  
-- Personalize retention campaigns  
-- Reduce revenue leakage and increase **Customer Lifetime Value (CLV)**  
-- Optimize **Net Revenue Retention (NRR)**  
+The **Software-as-a-Service (SaaS)** model thrives on recurring subscriptions instead of one-time licenses.  
+That means business success depends less on acquiring new customers and more on **keeping existing ones**.  
+However, predicting which customers are likely to churn — and understanding *why* — remains a key challenge.
 
-### Prior Work
-Most previous research (in telecom or banking) used **single-source transactional datasets**, limiting contextual insight.  
-Typical issues include:
-- Narrow focus on classification accuracy  
-- Ignoring **feature usage** and **support experience**  
-- No modeling of **financial impact** such as MRR/ARR forecasting  
+This project provides an end-to-end framework to:
+- **Predict** which accounts are at risk of churn  
+- **Explain** the behavioral or experience-based drivers behind churn  
+- **Forecast** the financial impact on MRR/ARR  
+- **Simulate** the ROI of retention initiatives  
 
-### Our Contribution
-We propose an **integrated SaaS Churn & Retention Intelligence Framework** that:
-1. **Predicts** which customers are likely to churn (Predictive Layer)  
-2. **Explains** the behavioral & experiential causes (Diagnostic Layer)  
-3. **Simulates** retention interventions and revenue impact (Prescriptive Layer)  
-
-This system combines **multi-table operational data** — `accounts`, `subscriptions`, `feature_usage`, `support_tickets`, and `churn_events` — to deliver a 360° view of customer lifecycle health.
+By combining analytics, machine learning, and visualization, this solution delivers a full view of customer health and revenue risk.
 
 ---
 
-## Problem Formulation
+## Business Goals
 
-### Overall Goal
-Design an **end-to-end data-driven framework** that predicts churn, identifies its root causes, and quantifies the financial effect on revenue.
+### 1️ Predict Customer Churn
+Build a machine learning model that predicts which accounts are most likely to cancel or not renew.
 
----
+**Key Outputs**
+- Churn probability for each customer  
+- Ranked list of high-risk accounts for retention teams  
 
-### Problem 1 – Predictive Modeling of Customer Churn
-
-**Statement:**  
-Develop a machine-learning model that predicts the likelihood of churn using multi-source SaaS data.
-
-**Objectives:**
-- Predict `churn_flag` at the account level  
-- Rank customers by churn probability  
-
-**Assumptions:**
-- Each `account_id` is unique and independent  
-- Most recent `subscription` defines churn status  
-
-**Constraints:**
-- Severe class imbalance (fewer churners)  
-- Synthetic dataset lacks daily granularity  
+**Challenges**
+- Strong class imbalance (few churners vs active users)  
+- Sparse feature usage and feedback data  
 
 ---
 
-### Problem 2 – Diagnostic Analysis of Churn Drivers
+### 2️ Identify Churn Drivers
+Find what behaviors or experiences correlate most strongly with churn.
 
-**Statement:**  
-Identify behavioral and experiential factors contributing to churn.
+**Key Insights**
+- Analyze support satisfaction, refund trends, and product usage patterns  
+- Use NLP on feedback text to detect reasons like *pricing*, *bugs*, or *missing features*
 
-**Objectives:**
-- Quantify impact of **usage frequency**, **satisfaction**, and **refunds**  
-- Perform NLP on `feedback_text` to classify churn reasons  
-
-**Assumptions:**
-- Low engagement and satisfaction → higher churn risk  
-- Feedback text reliably reflects sentiment  
-
-**Constraints:**
-- Limited examples for each churn reason  
+**Why It Matters**
+- Helps leadership target the right pain points before customers leave  
 
 ---
 
-### Problem 3 – Forecasting and Revenue Impact Simulation
+### 3️ Forecast Financial Impact
+Project MRR and ARR loss over time and simulate the benefits of retention actions.
 
-**Statement:**  
-Forecast future MRR and ARR and simulate financial loss from churn.
+**Key Insights**
+- Forecast future churn-related revenue dips  
+- Quantify potential revenue retained from churn reduction scenarios  
 
-**Objectives:**
-- Predict revenue trends using **Prophet** or **LSTM**  
-- Compute **NRR** and simulate impact of retention actions  
-
-**Assumptions:**
-- Past churn and upgrades represent future patterns  
-
-**Constraints:**
-- Must aggregate data monthly for forecasting  
+**Why It Matters**
+- Connects data science results directly to business outcomes  
 
 ---
 
-## Dataset Description
+## Data Overview
 
-The **RavenStack Dataset** simulates a realistic SaaS environment through **five relational tables**.
+**Dataset:** *RavenStack SaaS Dataset* (simulated multi-table business data)
 
 | Table | Description | Key Fields |
 |:------|:-------------|:-----------|
-| **accounts.csv** | Customer metadata (industry, region, plan, referral source) | `account_id`, `industry`, `country`, `plan_tier`, `is_trial` |
-| **subscriptions.csv** | Subscription lifecycle & billing | `subscription_id`, `account_id`, `mrr_amount`, `arr_amount`, `upgrade_flag`, `churn_flag`, `billing_freq`, `auto_renew_flag` |
-| **feature_usage.csv** | Daily product usage | `usage_id`, `subscription_id`, `feature_name`, `usage_count`, `usage_duration`, `error_count`, `is_beta_feature` |
-| **support_tickets.csv** | Support activity & satisfaction | `ticket_id`, `account_id`, `resolution_time`, `priority`, `satisfaction`, `escalation_flag` |
-| **churn_events.csv** | Churn details & feedback | `churn_event_id`, `account_id`, `churn_date`, `reason_code`, `refund_amount`, `feedback_text` |
+| **accounts.csv** | Customer details | `account_id`, `industry`, `country`, `plan_tier`, `is_trial` |
+| **subscriptions.csv** | Subscription and billing lifecycle | `subscription_id`, `account_id`, `mrr_amount`, `churn_flag`, `auto_renew_flag` |
+| **feature_usage.csv** | Product usage tracking | `usage_id`, `subscription_id`, `feature_name`, `usage_count`, `usage_duration`, `error_count` |
+| **support_tickets.csv** | Support performance and satisfaction | `ticket_id`, `account_id`, `resolution_time`, `priority`, `satisfaction` |
+| **churn_events.csv** | Cancellation details and customer feedback | `churn_event_id`, `account_id`, `churn_date`, `reason_code`, `refund_amount`, `feedback_text` |
 
-**Relational Keys**
-- `account_id` → primary key linking all tables  
-- `subscription_id` → one-to-many with `account_id`  
-- `usage_id` → foreign key to `subscription_id`  
-- `ticket_id`, `churn_event_id` → linked to `account_id`  
+**Data Relationships**
+- `account_id` connects all tables (primary key)  
+- `subscription_id` links usage and billing  
+- `ticket_id` and `churn_event_id` track post-support and churn events  
 
 ---
 
-## Methodology
+## Approach
 
 ### Step 1 – Data Engineering
-1. Load all CSVs into a SQL environment (SQLite / Snowflake).  
-2. Join tables using `account_id` and `subscription_id`.  
-3. Aggregate metrics: mean `usage_duration`, `error_count`, `satisfaction`, `refund_amount`.  
-4. Encode categoricals (`industry`, `country`, `plan_tier`).  
-5. Handle missing data with **median** / **KNN imputation**.
+- Merge multiple data sources into one consolidated SQL view (SQLite / Snowflake).  
+- Aggregate key metrics such as average usage time, satisfaction, and refund amount.  
+- Encode categorical features (`industry`, `plan_tier`, `country`).  
+- Handle missing values with median or KNN imputation.
 
 ---
 
 ### Step 2 – Feature Engineering
 Derived features:
-- **Engagement Score = normalized (usage_count + usage_duration)**  
-- **Support Efficiency Index = satisfaction / resolution_time**  
-- **Revenue Stability = (1 – churn_flag) × auto_renew_flag**  
-- Extract text topics via **TF-IDF / BERTopic**
+- **Engagement Score** = normalized `(usage_count + usage_duration)`  
+- **Support Efficiency** = `satisfaction / resolution_time`  
+- **Revenue Stability** = `(1 – churn_flag) × auto_renew_flag`  
+- Text feature extraction using **TF-IDF / BERTopic** for `feedback_text`.
 
 ---
 
 ### Step 3 – Modeling
 
-| Task | Algorithm | Evaluation Metrics |
-|:-----|:-----------|:------------------|
-| Churn Prediction | XGBoost / CatBoost | AUC-ROC , F1-Score |
-| Explainability | SHAP , PDP | Feature Importance (global & local) |
-| Forecasting | Prophet / LSTM | MAPE for MRR / ARR |
-| Text Analytics | TF-IDF + LDA / BERTopic | Topic Coherence & Keyword Weights |
+| Task | Algorithm | Key Metric |
+|------|------------|------------|
+| Churn Prediction | XGBoost / CatBoost | ROC-AUC, F1-score |
+| Explainability | SHAP / Partial Dependence | Feature Importance (global & local) |
+| Revenue Forecasting | Prophet / LSTM | MAPE for MRR/ARR |
+| NLP Analysis | TF-IDF + LDA / BERTopic | Topic Coherence, Sentiment Alignment |
 
 ---
 
-### Step 4 – Visualization & Reporting
-Create an interactive **Retention Command Center Dashboard** (Tableau / Plotly Dash):
-- Churn risk by industry, region, plan tier  
-- Feature usage heatmaps and support trends  
-- Forecasted MRR and churn-loss projection  
-- Word cloud of feedback themes  
+### Step 4 – Visualization & Insights
+Build a **Retention Intelligence Dashboard** (Plotly / Tableau) showing:
+- Churn risk by industry, plan, or region  
+- Top churn drivers (low usage, poor satisfaction, refunds)  
+- MRR & ARR forecast with simulated churn-loss impact  
+- Word clouds for customer feedback themes  
 
 ---
 
-## Results (Expected)
+## Expected Results
 
 | Metric | Value | Interpretation |
 |:--------|:-------|:---------------|
-| **AUC-ROC** | 0.89 | High predictive accuracy |
-| **Recall@10** | 0.82 | Detects most high-risk customers |
-| **Top Drivers** | Satisfaction ↓, Usage ↓, Refund ↑, Plan Tier | Behavioral + financial factors |
-| **Feedback Themes** | “Pricing”, “Missing Features”, “Support Delay” | Key churn causes |
-| **MRR Forecast MAPE** | ± 5.8 % | Reliable revenue forecast |
-| **Simulated Impact** | 15 % churn reduction → +$200 K ARR retained | Retention ROI projection |
+| **AUC-ROC** | ~0.89 | High accuracy in identifying churners |
+| **Recall@10** | ~0.82 | Strong recall of top high-risk customers |
+| **Top Drivers** | Low satisfaction, high refunds, low usage | Key churn indicators |
+| **Feedback Themes** | “Pricing”, “Support delay”, “Feature gaps” | Most common churn causes |
+| **Forecast Error (MAPE)** | ±5.8% | Reliable MRR/ARR forecasting |
+| **Retention ROI (Simulated)** | 15% churn reduction → +$200K ARR retained | Tangible financial value |
 
 ---
 
-## Conclusion
+## Insights & Impact
 
-This project builds an **end-to-end SaaS Retention Intelligence System** combining:
-- **Predictive modeling** → *Who will churn?*  
-- **Diagnostic analytics** → *Why do they churn?*  
-- **Revenue simulation** → *How much revenue can be saved?*  
+- Transforms raw SaaS data into actionable retention metrics  
+- Connects customer experience (support, usage) with revenue impact  
+- Enables proactive retention strategies using explainable ML  
+- Provides a scalable blueprint for data-driven customer success teams  
 
-By integrating **multi-table analytics** and **machine learning**, the system enables proactive, explainable, and financially meaningful retention decisions in SaaS environments.
+---
+
+## Tech Stack
+
+**Languages:** Python, SQL  
+**Libraries:** Pandas, NumPy, Scikit-learn, XGBoost, Prophet, TensorFlow, BERTopic, SHAP, Plotly, Tableau  
+**Database:** SQLite / Snowflake  
+**Visualization:** Plotly Dash / Tableau  
+
+---
+
+## Key Takeaways
+
+- Predictive analytics + causal diagnostics = measurable retention value  
+- Explainability bridges the gap between data science and business teams  
+- Integrated forecasting ties model outputs directly to financial KPIs  
+- Real-world frameworks like this drive sustainable SaaS growth  
+
+---
+
+## Author
+**Swateya Gupta**  
+Delivery Data Scientist | Turing  
+M.S. (Research) – IIT Guwahati  
+
+---
