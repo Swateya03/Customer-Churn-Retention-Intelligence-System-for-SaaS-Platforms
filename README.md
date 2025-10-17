@@ -103,7 +103,6 @@ Derived features:
 | Churn Prediction | XGBoost / CatBoost | ROC-AUC, F1-score |
 | Explainability | SHAP / Partial Dependence | Feature Importance (global & local) |
 | Revenue Forecasting | Prophet / LSTM | MAPE for MRR/ARR |
-| NLP Analysis | TF-IDF + LDA / BERTopic | Topic Coherence, Sentiment Alignment |
 
 ---
 
@@ -112,7 +111,6 @@ Build a **Retention Intelligence Dashboard** (Plotly / Tableau) showing:
 - Churn risk by industry, plan, or region  
 - Top churn drivers (low usage, poor satisfaction, refunds)  
 - MRR & ARR forecast with simulated churn-loss impact  
-- Word clouds for customer feedback themes  
 
 ---
 
