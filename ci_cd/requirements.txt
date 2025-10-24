@@ -1,0 +1,17 @@
+pandas
+numpy
+scikit-learn
+xgboost
+catboost
+shap
+prophet
+tensorflow
+sqlalchemy
+plotly
+flask
+pyyaml
+pytest
+textblob
+category-encoders
+shap
+seaborn

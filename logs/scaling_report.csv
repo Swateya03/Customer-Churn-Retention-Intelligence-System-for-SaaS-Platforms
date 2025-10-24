@@ -1,0 +1,11 @@
+Feature,Applied_Scaling
+account_seats,Log Scaling (heavy-tailed)
+mrr_amount,Min-Max Scaling (moderate skew)
+arr_amount,Min-Max Scaling (moderate skew)
+usage_count,Z-Score Scaling (normal distribution)
+usage_duration_secs,Min-Max Scaling (moderate skew)
+error_count,Min-Max Scaling (moderate skew)
+resolution_time_hours,Z-Score Scaling (normal distribution)
+first_response_time_minutes,Z-Score Scaling (normal distribution)
+satisfaction_score,Z-Score Scaling (normal distribution)
+refund_amount_usd,Min-Max Scaling (moderate skew)

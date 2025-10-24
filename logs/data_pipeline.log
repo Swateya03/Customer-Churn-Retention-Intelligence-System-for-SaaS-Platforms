@@ -1,0 +1,196 @@
+2025-10-17 15:44:57,179 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-17 15:44:57,210 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'accounts' (500 rows)
+2025-10-17 15:44:57,292 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'feature_usage' (25000 rows)
+2025-10-17 15:44:57,310 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'churn_events' (600 rows)
+2025-10-17 15:44:57,342 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'subscriptions' (5000 rows)
+2025-10-17 15:44:57,364 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'support_tickets' (2000 rows)
+2025-10-17 15:44:57,364 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-17 16:02:17,948 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-17 16:02:17,980 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'accounts' (500 rows)
+2025-10-17 16:02:18,076 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'feature_usage' (25000 rows)
+2025-10-17 16:02:18,098 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'churn_events' (600 rows)
+2025-10-17 16:02:18,137 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'subscriptions' (5000 rows)
+2025-10-17 16:02:18,162 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'support_tickets' (2000 rows)
+2025-10-17 16:02:18,162 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-17 16:05:14,876 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-17 16:05:14,907 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'accounts' (500 rows)
+2025-10-17 16:05:15,073 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'feature_usage' (25000 rows)
+2025-10-17 16:05:15,099 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'churn_events' (600 rows)
+2025-10-17 16:05:15,151 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'subscriptions' (5000 rows)
+2025-10-17 16:05:15,181 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'support_tickets' (2000 rows)
+2025-10-17 16:05:15,181 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-17 16:05:17,769 | INFO | __main__ | Merged dataset shape: (147896, 44)
+2025-10-17 16:05:19,882 | INFO | __main__ | Merged dataset saved at data/processed/merged_customer_data.csv
+2025-10-17 16:05:50,705 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-17 16:05:50,732 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'accounts' (500 rows)
+2025-10-17 16:05:50,832 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'feature_usage' (25000 rows)
+2025-10-17 16:05:50,853 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'churn_events' (600 rows)
+2025-10-17 16:05:50,908 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'subscriptions' (5000 rows)
+2025-10-17 16:05:50,935 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'support_tickets' (2000 rows)
+2025-10-17 16:05:50,935 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-17 16:05:53,261 | INFO | __main__ | Merged dataset shape: (147896, 45)
+2025-10-17 16:05:55,233 | INFO | __main__ | Merged dataset saved at data/processed/merged_customer_data.csv
+2025-10-17 18:24:51,886 | INFO | __main__ | Loaded merged data: (147896, 45)
+2025-10-17 18:25:58,752 | INFO | __main__ | Loaded merged data: (147896, 45)
+2025-10-17 18:25:58,817 | INFO | __main__ | Aggregated data shape: (500, 11)
+2025-10-17 18:25:58,824 | INFO | __main__ | Encoded industry with 5 unique values
+2025-10-17 18:25:58,824 | INFO | __main__ | Encoded plan_tier with 3 unique values
+2025-10-17 18:25:58,825 | INFO | __main__ | Encoded country with 7 unique values
+2025-10-17 18:25:58,838 | INFO | __main__ | Missing values imputed using KNN (k=3)
+2025-10-17 18:25:58,845 | INFO | __main__ | Cleaned data saved → data/processed/cleaned_customer_data.csv
+2025-10-17 18:58:15,543 | INFO | __main__ | Loaded merged dataset with shape: (147896, 45)
+2025-10-17 18:58:15,655 | INFO | __main__ | Aggregated unified dataset shape: (500, 15)
+2025-10-17 18:58:15,662 | INFO | __main__ | Encoded industry with 5 unique classes.
+2025-10-17 18:58:15,663 | INFO | __main__ | Encoded plan_tier with 3 unique classes.
+2025-10-17 18:58:15,663 | INFO | __main__ | Encoded country with 7 unique classes.
+2025-10-17 18:58:15,681 | INFO | __main__ | KNN imputation (k=3) completed successfully.
+2025-10-17 18:58:15,689 | INFO | __main__ | Unified cleaned dataset saved → data/processed/cleaned_customer_data.csv
+2025-10-17 20:55:51,860 | INFO | __main__ | Loaded cleaned dataset: (500, 15)
+2025-10-17 20:55:52,021 | INFO | __main__ | Feature-engineered dataset saved → data/processed/engineered_features.csv
+2025-10-17 21:07:33,863 | INFO | __main__ | Loaded engineered features: (500, 19)
+2025-10-17 21:07:35,701 | INFO | __main__ | ROC-AUC: 1.0000 | F1: 1.0000
+2025-10-17 21:07:35,712 | INFO | __main__ | Model + scaler saved in model_registry
+2025-10-17 21:07:35,715 | INFO | __main__ | Metrics stored successfully.
+2025-10-17 21:11:07,752 | INFO | __main__ | Loaded engineered features: (500, 19)
+2025-10-17 21:11:09,627 | INFO | __main__ | ROC-AUC: 0.4907 | F1: 0.6619
+2025-10-17 21:11:09,647 | INFO | __main__ | Model + scaler saved in model_registry
+2025-10-17 21:11:09,654 | INFO | __main__ | Metrics stored successfully.
+2025-10-17 21:13:56,282 | INFO | __main__ | Loaded engineered features: (500, 19)
+2025-10-17 21:13:56,286 | INFO | __main__ | Computed scale_pos_weight: 0.6026
+2025-10-17 21:13:58,175 | INFO | __main__ | [XGBoost] ROC-AUC: 0.4915 | F1: 0.6212
+2025-10-17 21:13:58,200 | INFO | __main__ | Model and scaler saved in model_registry
+2025-10-17 21:13:58,203 | INFO | __main__ | Metrics stored successfully.
+2025-10-17 21:15:19,704 | INFO | __main__ | Loaded engineered features: (500, 19)
+2025-10-17 21:15:19,706 | INFO | __main__ | Computed scale_pos_weight: 0.6026
+2025-10-17 21:15:21,647 | INFO | __main__ | [XGBoost] ROC-AUC: 0.4915 | F1: 0.6212
+2025-10-17 21:15:21,668 | INFO | __main__ | Model and scaler saved in model_registry
+2025-10-17 21:15:21,671 | INFO | __main__ | Metrics stored successfully.
+2025-10-17 21:16:41,954 | INFO | __main__ | Loaded features: (500, 19)
+2025-10-17 21:16:50,233 | INFO | __main__ | Best model: CAT | ROC-AUC=0.5518
+2025-10-17 21:16:50,593 | INFO | __main__ | CAT ROC-AUC=0.5518 | F1=0.7285
+2025-10-17 21:20:09,132 | INFO | __main__ | Loaded dataset: (500, 19)
+2025-10-17 21:20:17,641 | INFO | __main__ | Best XGB params: {'subsample': 1.0, 'reg_lambda': 0.5, 'n_estimators': 300, 'max_depth': 5, 'learning_rate': 0.03, 'colsample_bytree': 0.7}
+2025-10-17 21:20:17,878 | INFO | __main__ | Fold 1: ROC-AUC=0.5637 | F1=0.6452
+2025-10-17 21:20:18,145 | INFO | __main__ | Fold 2: ROC-AUC=0.4385 | F1=0.5984
+2025-10-17 21:20:18,439 | INFO | __main__ | Fold 3: ROC-AUC=0.4656 | F1=0.6190
+2025-10-17 21:20:18,781 | INFO | __main__ | Fold 4: ROC-AUC=0.5109 | F1=0.6567
+2025-10-17 21:20:19,047 | INFO | __main__ | Fold 5: ROC-AUC=0.5075 | F1=0.6870
+2025-10-17 21:20:20,960 | INFO | __main__ | Fold 1: ROC-AUC=0.5565 | F1=0.6565
+2025-10-17 21:20:22,992 | INFO | __main__ | Fold 2: ROC-AUC=0.4287 | F1=0.6522
+2025-10-17 21:20:25,178 | INFO | __main__ | Fold 3: ROC-AUC=0.4792 | F1=0.6715
+2025-10-17 21:20:27,078 | INFO | __main__ | Fold 4: ROC-AUC=0.5152 | F1=0.7042
+2025-10-17 21:20:29,364 | INFO | __main__ | Fold 5: ROC-AUC=0.5920 | F1=0.7194
+2025-10-17 21:20:49,301 | INFO | __main__ | Training complete with CATBOOST
+2025-10-17 21:25:53,278 | INFO | __main__ | Loaded dataset: (500, 19)
+2025-10-17 21:28:01,213 | INFO | __main__ | Loaded dataset: (500, 19)
+2025-10-17 21:28:01,226 | INFO | __main__ | Encoding categorical columns: ['industry', 'plan_tier', 'country']
+2025-10-17 21:28:06,467 | INFO | __main__ | XGB mean ROC-AUC=0.5051, F1=0.6487
+2025-10-17 21:28:10,156 | INFO | __main__ | XGB mean ROC-AUC=0.5066, F1=0.6475
+2025-10-17 21:28:16,024 | INFO | __main__ | CAT mean ROC-AUC=0.5278, F1=0.6899
+2025-10-17 21:28:45,904 | INFO | __main__ | CAT mean ROC-AUC=0.5223, F1=0.6976
+2025-10-17 21:28:45,907 | INFO | __main__ | Best configuration: {'model': 'cat', 'params': {'model': 'cat', 'depth': 6, 'learning_rate': 0.05, 'iterations': 800}, 'roc_auc': np.float64(0.5277737354138032), 'f1': np.float64(0.6899389503987681)}
+2025-10-17 22:29:27,298 | INFO | __main__ | ✅ Loaded dataset: (147896, 11)
+2025-10-17 22:29:33,147 | INFO | __main__ | XGB mean ROC-AUC=0.9110, F1=0.6641
+2025-10-17 22:29:44,136 | INFO | __main__ | XGB mean ROC-AUC=0.9814, F1=0.8336
+2025-10-17 22:30:28,838 | INFO | __main__ | CAT mean ROC-AUC=0.9682, F1=0.8207
+2025-10-17 22:32:01,091 | INFO | __main__ | CAT mean ROC-AUC=0.9739, F1=0.8392
+2025-10-17 22:32:01,092 | INFO | __main__ | Best configuration: {'model': 'xgb', 'params': {'model': 'xgb', 'max_depth': 6, 'learning_rate': 0.1, 'n_estimators': 600}, 'roc_auc': np.float64(0.9814330868348824), 'f1': np.float64(0.8336387321019277)}
+2025-10-17 22:40:08,055 | INFO | __main__ | ✅ Loaded dataset: (147896, 11)
+2025-10-17 22:40:12,822 | INFO | __main__ | XGB mean ROC-AUC=0.9110, F1=0.6641
+2025-10-17 22:40:22,131 | INFO | __main__ | XGB mean ROC-AUC=0.9814, F1=0.8336
+2025-10-17 22:41:06,898 | INFO | __main__ | CAT mean ROC-AUC=0.9682, F1=0.8207
+2025-10-17 22:42:22,946 | INFO | __main__ | CAT mean ROC-AUC=0.9739, F1=0.8392
+2025-10-17 22:42:22,948 | INFO | __main__ | Best configuration: {'model': 'xgb', 'params': {'model': 'xgb', 'max_depth': 6, 'learning_rate': 0.1, 'n_estimators': 600}, 'roc_auc': np.float64(0.9814330868348824), 'f1': np.float64(0.8336387321019277)}
+2025-10-17 22:45:12,698 | INFO | __main__ | ✅ Loaded dataset: (147896, 11)
+2025-10-17 22:45:39,224 | INFO | __main__ | XGB mean ROC-AUC=0.9110, F1=0.6641
+2025-10-17 22:47:05,991 | INFO | __main__ | XGB mean ROC-AUC=0.9814, F1=0.8336
+2025-10-17 22:48:06,845 | INFO | __main__ | CAT mean ROC-AUC=0.9682, F1=0.8207
+2025-10-17 22:49:46,591 | INFO | __main__ | CAT mean ROC-AUC=0.9739, F1=0.8392
+2025-10-17 22:49:46,592 | INFO | __main__ | Best configuration: {'model': 'xgb', 'params': {'model': 'xgb', 'max_depth': 6, 'learning_rate': 0.1, 'n_estimators': 600}, 'roc_auc': np.float64(0.9814330868348824), 'f1': np.float64(0.8336387321019277)}
+2025-10-19 12:15:09,710 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:15:09,743 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:15:09,832 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:15:09,857 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:15:09,892 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:15:09,914 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:15:09,914 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:16:10,792 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:16:10,822 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:16:10,917 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:16:10,937 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:16:10,972 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:16:10,997 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:16:10,997 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:16:10,998 | INFO | __main__ | Existing tables in DB: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:17:52,883 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:17:52,912 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:17:53,044 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:17:53,064 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:17:53,126 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:17:53,184 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:17:53,184 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:17:53,185 | INFO | __main__ | Existing tables in DB: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:18:48,209 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:18:48,242 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:18:48,333 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:18:48,353 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:18:48,390 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:18:48,414 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:18:48,414 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:18:48,414 | INFO | __main__ | Existing tables in DB: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:22:28,793 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:22:28,824 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:22:28,955 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:22:28,979 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:22:29,028 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:22:29,057 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:22:29,057 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:23:32,896 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:23:32,924 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:23:33,012 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:23:33,032 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:23:33,066 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:23:33,088 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:23:33,088 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:23:33,089 | INFO | __main__ | Detected tables in SQLite: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:23:37,835 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:23:37,864 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:23:37,946 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:23:37,965 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:23:38,000 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:23:38,025 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:23:38,025 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:23:38,026 | INFO | __main__ | Detected tables in SQLite: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:24:30,587 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:24:30,615 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:24:30,709 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:24:30,728 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:24:30,764 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:24:30,791 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:24:30,791 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:24:30,792 | INFO | __main__ | Detected tables: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:25:14,585 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:25:14,614 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:25:14,696 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:25:14,715 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:25:14,748 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:25:14,771 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:25:14,771 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:25:14,772 | INFO | __main__ | Detected tables: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:26:18,293 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:26:18,323 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:26:18,414 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:26:18,435 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:26:18,470 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:26:18,493 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:26:18,493 | INFO | __main__ | All CSVs successfully loaded into SQLite.
+2025-10-19 12:26:18,494 | INFO | __main__ | Detected tables: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:28:18,783 | INFO | __main__ | Connected to SQLite DB at data/feature_store.db
+2025-10-19 12:28:18,814 | INFO | __main__ | Loaded ravenstack_accounts.csv into table 'ravenstack_accounts' (500 rows)
+2025-10-19 12:28:18,954 | INFO | __main__ | Loaded ravenstack_feature_usage.csv into table 'ravenstack_feature_usage' (25000 rows)
+2025-10-19 12:28:18,973 | INFO | __main__ | Loaded ravenstack_churn_events.csv into table 'ravenstack_churn_events' (600 rows)
+2025-10-19 12:28:19,022 | INFO | __main__ | Loaded ravenstack_subscriptions.csv into table 'ravenstack_subscriptions' (5000 rows)
+2025-10-19 12:28:19,059 | INFO | __main__ | Loaded ravenstack_support_tickets.csv into table 'ravenstack_support_tickets' (2000 rows)
+2025-10-19 12:28:19,059 | INFO | __main__ | ✅ All CSVs successfully loaded into SQLite.
+2025-10-19 12:28:19,060 | INFO | __main__ | Detected tables: ['accounts', 'feature_usage', 'churn_events', 'subscriptions', 'support_tickets', 'ravenstack_accounts', 'ravenstack_feature_usage', 'ravenstack_churn_events', 'ravenstack_subscriptions', 'ravenstack_support_tickets']
+2025-10-19 12:28:19,169 | INFO | __main__ | ✅ Merged dataset shape: (500, 30)

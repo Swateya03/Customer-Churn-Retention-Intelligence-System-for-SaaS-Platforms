@@ -1,0 +1,23 @@
+🔍 Validation Log Started: 2025-10-18 21:42:58.722218
+Dataset Shape: (147896, 44)
+
+⚠️ Fixed 121030 invalid satisfaction_score values (outside [1,5]).
+⚠️ Fixed 67243 negative usage_count → set to 0.
+⚠️ resolution_time_hours: negatives or missing values found → fixing.
+⚠️ first_response_time_minutes: negatives or missing values found → fixing.
+✅ Auto-corrections applied successfully.
+
+⚠️ Too many duplicate values in usage_count — switching to fixed-width binning.
+✅ Binning transformations added for interpretability.
+✅ Validated & binned data saved at: /home/swateya_gupta/2/data/processed/validated_data.csv
+
+================== VALIDATION SUMMARY ==================
+🕓 Start Time: 2025-10-18 21:42:57.897128
+🕓 End Time:   2025-10-18 21:43:01.429131
+📦 Total Records: 147896
+📊 Total Columns: 47
+🔢 Numeric Columns Checked: 22
+🛠️ Total Corrections Applied: 188275
+⏱️ Total Duration: 3.53 seconds
+========================================================
+

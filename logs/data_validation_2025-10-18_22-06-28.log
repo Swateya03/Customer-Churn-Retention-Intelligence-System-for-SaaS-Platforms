@@ -1,0 +1,35 @@
+🔍 Validation Log Started: 2025-10-18 22:06:29.448226
+Dataset Shape: (147896, 130)
+
+🔢 Numeric columns detected: 130
+📊 Encoded categorical columns: 122
+📈 Continuous numeric columns: 8
+
+⚠️ Non-binary encoded columns found: ['error_count', 'satisfaction_score'] ... (showing first 10)
+⚠️ Found 67243 negative values in usage_count → clipped to 0.
+⚠️ Found 74215 negative values in resolution_time_hours → clipped to 0.
+⚠️ Found 75384 negative values in first_response_time_minutes → clipped to 0.
+⚙️ satisfaction_score had negatives → clipped to 0.
+✅ Auto-corrections applied successfully.
+
+🔍 Missing values remaining: 0
+📏 Constant-value columns: 6
+⚙️ Binary-like encoded columns: 120
+
+📊 Validation comparison saved at: /home/swateya_gupta/2/logs/validation_comparison_2025-10-18_22-06-28.csv
+
+⚠️ Too many duplicate values in usage_count — switching to fixed-width binning.
+✅ Binning transformations added where applicable.
+✅ Validated dataset saved at: /home/swateya_gupta/2/data/processed/validated_data.csv
+
+================= VALIDATION SUMMARY =================
+🕓 Start Time: 2025-10-18 22:06:28.069062
+🕓 End Time:   2025-10-18 22:06:40.341552
+📦 Total Records: 147896
+📊 Total Columns: 133
+🔢 Numeric Columns Checked: 130
+🛠️ Total Corrections Applied: 216843
+📈 Comparison Report: /home/swateya_gupta/2/logs/validation_comparison_2025-10-18_22-06-28.csv
+⏱️ Total Duration: 12.27 seconds
+=======================================================
+

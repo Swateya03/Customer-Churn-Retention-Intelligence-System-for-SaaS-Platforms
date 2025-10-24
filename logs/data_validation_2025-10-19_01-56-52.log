@@ -1,0 +1,42 @@
+🔍 Validation Log Started: 2025-10-19 01:56:53.523525
+Dataset Shape: (147896, 86)
+
+🔢 Numeric columns detected: 86
+📊 Encoded categorical columns: 78
+📈 Continuous numeric columns: 8
+
+⚠️ Non-binary encoded columns found: ['error_count', 'satisfaction_score'] ... (showing first 10)
+⚠️ Found 67243 negative values in usage_count → clipped to 0.
+⚠️ Found 74215 negative values in resolution_time_hours → clipped to 0.
+⚠️ Found 75384 negative values in first_response_time_minutes → clipped to 0.
+⚙️ satisfaction_score had negatives → clipped to 0.
+✅ Auto-corrections applied successfully.
+
+🔍 Missing values remaining: 0
+📏 Constant-value columns: 4
+⚙️ Binary-like encoded columns: 76
+
+🧭 Running temporal leakage audit...
+🚨 Dropping refund_amount_usd to eliminate residual financial leakage.
+✅ refund_amount_usd successfully removed from dataframe.
+🚨 Force-dropped high-risk column: subscription_is_trial
+📊 Validation comparison saved at: /home/swateya_gupta/2/logs/validation_comparison_2025-10-19_01-56-52.csv
+
+⚠️ Too many duplicate values in usage_count — switching to fixed-width binning.
+✅ Ordinally encoded: usage_level
+✅ Ordinally encoded: response_speed
+✅ Ordinally encoded: account_size
+✅ Binning transformations added where applicable.
+✅ Validated dataset saved at: /home/swateya_gupta/2/data/processed/validated_data.csv
+
+================= VALIDATION SUMMARY =================
+🕓 Start Time: 2025-10-19 01:56:52.563253
+🕓 End Time:   2025-10-19 01:57:01.427532
+📦 Total Records: 147896
+📊 Total Columns: 87
+🔢 Numeric Columns Checked: 84
+🛠️ Total Corrections Applied: 216842
+📈 Comparison Report: /home/swateya_gupta/2/logs/validation_comparison_2025-10-19_01-56-52.csv
+⏱️ Total Duration: 8.86 seconds
+=======================================================
+

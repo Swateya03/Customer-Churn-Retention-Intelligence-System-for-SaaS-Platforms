@@ -1,0 +1,5 @@
+model,params,roc_auc,f1,run_id
+xgb,"{'model': 'xgb', 'max_depth': 4, 'learning_rate': 0.05, 'n_estimators': 400}",0.5051159211600638,0.6487413339526891,2025-10-17 21:28:45.913619
+xgb,"{'model': 'xgb', 'max_depth': 6, 'learning_rate': 0.1, 'n_estimators': 600}",0.506577253945675,0.6475152731469109,2025-10-17 21:28:45.913619
+cat,"{'model': 'cat', 'depth': 6, 'learning_rate': 0.05, 'iterations': 800}",0.5277737354138032,0.6899389503987681,2025-10-17 21:28:45.913619
+cat,"{'model': 'cat', 'depth': 8, 'learning_rate': 0.03, 'iterations': 1000}",0.5223016492116661,0.6976143022190545,2025-10-17 21:28:45.913619

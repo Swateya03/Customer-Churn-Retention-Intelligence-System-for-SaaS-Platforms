@@ -1,0 +1,26 @@
+🔍 Validation Log Started: 2025-10-19 01:38:36.146306
+Dataset Shape: (147896, 86)
+
+🔢 Numeric columns detected: 86
+📊 Encoded categorical columns: 78
+📈 Continuous numeric columns: 8
+
+⚠️ Non-binary encoded columns found: ['error_count', 'satisfaction_score'] ... (showing first 10)
+⚠️ Found 67243 negative values in usage_count → clipped to 0.
+⚠️ Found 74215 negative values in resolution_time_hours → clipped to 0.
+⚠️ Found 75384 negative values in first_response_time_minutes → clipped to 0.
+⚙️ satisfaction_score had negatives → clipped to 0.
+✅ Auto-corrections applied successfully.
+
+🔍 Missing values remaining: 0
+📏 Constant-value columns: 4
+⚙️ Binary-like encoded columns: 76
+
+🧭 Running temporal leakage audit...
+ℹ️ churn_date column missing — skipping temporal comparison.
+⚠️ Too many duplicate values in usage_count — switching to fixed-width binning.
+✅ Ordinally encoded: usage_level
+✅ Ordinally encoded: response_speed
+✅ Ordinally encoded: account_size
+✅ Binning transformations added where applicable.
+✅ Validated dataset saved at: /home/swateya_gupta/2/data/processed/validated_data.csv

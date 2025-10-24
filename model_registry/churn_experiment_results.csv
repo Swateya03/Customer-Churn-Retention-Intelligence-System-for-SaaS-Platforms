@@ -1,0 +1,2 @@
+model,params,roc_auc,f1
+xgb,"{'model': 'xgb', 'max_depth': 6, 'learning_rate': 0.1, 'n_estimators': 600}",0.9814330868348824,0.8336387321019277

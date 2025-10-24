@@ -1,0 +1,22 @@
+🔍 Validation Log Started: 2025-10-18 22:09:38.920930
+Dataset Shape: (147896, 130)
+
+🔢 Numeric columns detected: 130
+📊 Encoded categorical columns: 122
+📈 Continuous numeric columns: 8
+
+⚠️ Non-binary encoded columns found: ['error_count', 'satisfaction_score'] ... (showing first 10)
+⚠️ Found 67243 negative values in usage_count → clipped to 0.
+⚠️ Found 74215 negative values in resolution_time_hours → clipped to 0.
+⚠️ Found 75384 negative values in first_response_time_minutes → clipped to 0.
+⚙️ satisfaction_score had negatives → clipped to 0.
+✅ Auto-corrections applied successfully.
+
+🔍 Missing values remaining: 0
+📏 Constant-value columns: 6
+⚙️ Binary-like encoded columns: 120
+
+⚠️ 4 columns show >5% change in mean or variance:
+usage_count, resolution_time_hours, first_response_time_minutes, satisfaction_score
+📊 Validation comparison saved at: /home/swateya_gupta/2/logs/validation_comparison_2025-10-18_22-09-37.csv
+
