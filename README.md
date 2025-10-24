@@ -114,7 +114,7 @@ Build a **Retention Intelligence Dashboard** (Plotly / Tableau) showing:
 
 ---
 
-## Expected Results
+## Results
 
 | Metric | Value | Interpretation |
 |:--------|:-------|:---------------|
